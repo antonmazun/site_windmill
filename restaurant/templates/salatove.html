@@ -1,0 +1,17 @@
+{% extends 'main1.html' %}
+{% block salatove %}
+{% load staticfiles %}
+
+
+<div class="row">
+{%for i in salatove %}
+{% if i.type_photo == "салатове" %}
+  <div class="col-md-4 col-sm-4 col-xs-6 thumb">
+        <a class="fancyimage" rel="group" href="{{i.photo.url}}">
+          <img class="img-responsive img-rounded my_img" src="{{i.photo.url}}" />
+        </a>
+      </div>
+{%endif%}
+{%endfor%}
+    </div>
+{%endblock%}

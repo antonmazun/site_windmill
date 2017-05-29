@@ -1,0 +1,36 @@
+{% extends 'main1.html' %}
+{% load staticfiles %}
+{% block сold_snacks %}
+<div class="row carousel_margin">
+    <h1 style = "text-align : center; color : #6f4a26;">Холодні закуски</h1>
+{%for i in dishes %}
+{% if i.type == "холодні закуски" %}
+<div class = "col-md-5 cold_snack">
+<div class = "row">
+<div class = "col-md-6">
+   <img src = "{{i.image.url}}" alt = "холодні закуски"  class = "img-responsive img-rounded" id = "content_image">
+    </div>
+<!--    <p>Вид страви:{{i.type}}</p>-->
+    <p>Назва : <span style = "color:blue;">{{i.name}}</span></p>
+    <p style="word-wrap:break-word;">Склад: {{i.description}}</p>
+    <p>Вага: {{i.weight}} гр. </p>
+    </div>
+    <div class = "row">
+    <p id = "price">{{i.price}} <span>грн.</span></p>
+    {% if user.is_superuser %}
+<form action = "/del/{{i.id}}/" method = "POST">{% csrf_token %}
+        <input class  ="btn btn-danger" type = "submit"  value = "Видалити">
+        </form>
+{% endif %}
+    </div>
+    <br />
+
+
+
+
+</div>
+{% endif %}
+{% endfor%}
+
+</div>
+{%endblock%}

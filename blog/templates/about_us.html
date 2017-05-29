@@ -1,0 +1,61 @@
+{% extends 'main1.html '%}
+{% block about_us %}
+<div class="row carousel_margin">
+<div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia aperiam eius dolorum illo minus. Illum ducimus tempora veniam libero, voluptate deleniti eaque consectetur omnis aut, vero veritatis sed sint tempore.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia aperiam eius dolorum illo minus. Illum ducimus tempora veniam libero, voluptate deleniti eaque consectetur omnis aut, vero veritatis sed sint tempore.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia aperiam eius dolorum illo minus. Illum ducimus tempora veniam libero, voluptate deleniti eaque consectetur omnis aut, vero veritatis sed sint tempore.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia aperiam eius dolorum illo minus. Illum ducimus tempora veniam libero, voluptate deleniti eaque consectetur omnis aut, vero veritatis sed sint tempore.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+</div>
+</div>
+<div class="row">
+<div class= "col-md-6">
+    <form action = "/add_comments/" method  = "post" id = "form_review" style=" display: block;">{%csrf_token%}
+        <div class = "form-group" style = "text-align:center; margin-top:3px; ">
+            <label class = "control-label" style = "color: #8B0000; font-size:32px ;">Залишити відгук</label><br/>
+            <label for = "auth_name" class = "control-label pull-left col-md-3" style = "color: #8B0000; font-size:18px ;">Ваше ім’я</label>
+            <div class = "col-md-9">
+            <input id = "auth_name" required name = "author_name" type="text" class="form-control"/>
+            </div>
+            
+            <hr \>
+            
+            <div class="col-md-12">
+             <textarea required name = "text" class = "form-control " style = "color:black; resize: none; padding-bottom:15px;" id="text" cols="10" rows="5"></textarea>
+              <button id = "add" class = "btn btn-info pull-left" type = "submit" style = "margin-top:1%; background-color:#8B0000;">Залишити відгук</button>
+            </div>
+              </div>  
+<!--
+           
+            {% if user.is_superuser %}
+        <a href="del_comments/">
+            <button class="btn btn-danger pull-right" type = "submit" style = "background-color:#8B0000;">Видалити</button>
+        </a>
+        {% endif %}
+-->     
+    </form>
+</div>
+<div class="col-md-6">
+    <p class = "important_com" style = "color:">Ваші відгуки дуже важливі для нас!</p>
+</div>
+</div>
+{%if comments%}
+<div class="row ">
+{%for i in comments%}
+<div class = "col-md-6 comments comments_div">
+    <p style = " font-size:160%;" class = "auth_name"> <strong>{{i.author_name}}</strong></p>
+<p class = "text_com">  {{i.text}}</p>
+    {% if user.is_superuser %}
+<form action = "/del_comments/{{i.id}}/" method = "POST">{% csrf_token %}
+        <input class  ="btn btn-danger  pull-right" type = "submit"  value = "X">
+        </form>
+{% endif %}
+    </div>
+    
+{%endfor%}
+</div>
+{%endif%}
+
+{% if result %}
+<script>
+    alert('{{result}}');
+</script>
+{% endif %}
+{%endblock%}

@@ -1,0 +1,82 @@
+
+body{
+    padding-top: 0;
+    padding-right: 15%;
+    padding-left: 15%;
+}
+#header_info{
+    background-color: darkred;
+    width: 100%;
+    height: 5%;
+}
+
+
+body #carousel-example-generic{
+    
+}
+
+
+div ul li{
+    
+    color:aliceblue;
+}
+
+ul.hor_nav {
+    margin: 0;
+    padding:5px;;
+    
+}
+ul.hor_nav li {
+    display: inline;
+    margin-right: 4px;
+    padding: 30px;
+}
+div.back_img{
+    
+    height: 200px;
+    background-image: url('../image/images.jpg');
+    opacity: 0.9;
+}
+
+
+.vitryak{
+     margin-left: 1%;
+     border-radius: 50%;
+     height: 200px;
+     width: 200px; 
+}
+
+.carousel{
+    z-index: 40;
+    position : absolute;
+    top : 45%;
+    width: 96%;
+}
+
+.carousel-inner{
+    height: 600px;
+    width: 100%;
+}
+
+.navbar{
+    position: absolute;
+    margin-top: 3%;
+    margin-left: 5%;
+    background-color : darkred;
+    z-index: 100;
+    height:inherit;
+    color:aliceblue;
+}
+
+.nav li {
+padding-left:90px;
+    color :aliceblue;
+}
+
+ul{
+    color:white;
+}
+
+#add{
+    position: absolute;
+}

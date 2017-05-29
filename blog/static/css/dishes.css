@@ -1,0 +1,45 @@
+
+.cold_snack{
+   border-bottom: 1px solid #CCAD6C;
+    border-radius: 10px;
+    padding: 10px;
+    margin : 35px;
+    margin-right:5%;
+/*    background-image: url('http://espartos.ru/upload/resize_cache/iblock/00f/157_154_2/14652161968657.jpg');*/
+/*    background-image: url('http://www.vogue-interiors.ru/upload/iblock/fcf/fcfdcccb6ab9f15fc6f50233c78a67c7.jpeg');*/
+/*    background-image: url('http://mafia.ua/static/img/bg-item.png');*/
+    background-color: beige;
+    height: 250px;
+}
+
+
+#price{
+    color: #6f4a26;
+    font-size: 36px;
+    line-height: 39px;
+   text-align: center;
+/*
+    position: relative;
+    top:50px;
+*/
+       
+}
+#content_image{
+    float:left;
+    width:200px;
+    height:200px;
+}
+
+li.head_drop{
+    color: #6f4a26;
+    
+    font-size:18px;
+}
+
+.desc{
+    margin-right:-10%;
+}
+
+p{
+    color: #6f4a26;
+}

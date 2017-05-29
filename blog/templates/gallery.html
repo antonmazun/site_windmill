@@ -1,0 +1,40 @@
+{% extends 'main1.html' %}
+{% load staticfiles %}
+{% block gallery %}
+
+
+    <div class="row carousel_margin">
+        <!--<h3>adasd</h3>-->
+         <!--<a class = "col-md-4" href="salatove/">-->
+          <!--<img src = "{% static '/image/main_salatove.jpg' %}" alt= "salatove" width = "300">-->
+         <!--</a>-->
+         <!--<h3>adasd</h3>-->
+         <!--<a class = "col-md-4" href="salatove/">-->
+          <!--<img src = "{% static '/image/main_salatove.jpg' %}" alt= "salatove" width = "300">-->
+         <!--</a>-->
+
+
+        <div class="col-md-6">
+            <figcaption class="figure-caption name_gallery_style">Весілля в салатовому стилі</figcaption>
+            <a href  = "salatove/"><img src = "{% static '/image/main_salatove.jpg' %}" alt= "salatove" height = "370" ></a> <!--height = "370" -->
+        </div>
+          <div class="col-md-6">
+                <figcaption class="figure-caption name_gallery_style_rustik">Весілля в стилі рустік</figcaption>
+           <a href  = "rustik/"><img src = "{% static '/image/rustik_main.jpg' %}" alt= "rustik" class = "img-responsive" ></a>
+        </div>
+          <div class="col-md-6">
+                <figcaption class="figure-caption name_gallery_style_marsala">Весілля в стилі марсала</figcaption>
+           <a href  = "marsala/"><img src = "{% static '/image/marsala_main.jpg' %}" alt= "marsala" class = "img-responsive" ></a>
+        </div>
+         <div class="col-md-6">
+                <figcaption class="figure-caption name_gallery_style_bir">Весілля в бірьозовому стилі</figcaption>
+           <a href  = "bir/"><img src = "{% static '/image/bir_main.jpg' %}" alt= "marsala" class = "img-responsive" ></a>
+        </div>
+
+    </div>
+
+{%endblock%}
+
+
+
+height = "270" width = "350"

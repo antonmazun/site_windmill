@@ -1,0 +1,39 @@
+{% extends 'main1.html'%}
+{% block specialty%}
+<div class="row carousel_margin">
+    <h1 style = "text-align : center; color : #6f4a26;">Фірмові страви</h1>
+{%for i in dishes %}
+{% if i.type == "фірмові страви" %}
+<div class = "col-md-3 cold_snack">
+<div class = "row">
+<!--<div class = "col-md-12">-->
+   <!--&lt;!&ndash;<img src = "{{i.image.url}}" alt = "холодні закуски"  class = "img-responsive img-rounded" id = "content_image">&ndash;&gt;-->
+    <!--</div>-->
+    <div class = "col-md-12 desc">
+<!--    <p>Вид страви:{{i.type}}</p>-->
+    <p>Назва : <span style = "color:blue;">{{i.name}}</span></p>
+    <p style="word-wrap:break-word;">Склад: {{i.description}}</p>
+    <p>Вага: {{i.weight}} гр. </p>
+    </div>
+    </div>
+
+         <p id = "price">{{i.price}}<span>грн.</span></p>
+     {% if user.is_superuser %}
+<form action = "/del/{{i.id}}/" method = "POST">{% csrf_token %}
+        <input class  ="btn btn-danger" type = "submit"  value = "Видалити">
+        </form>
+{% endif %}
+
+<!--{% if user.is_superuser %}-->
+<!--<form action = "/del/{{i.id}}/" method = "POST">{% csrf_token %}-->
+        <!--<input class  ="button" type = "submit"  value = "Видалити">-->
+        <!--</form>-->
+<!--{% endif %}-->
+
+
+</div>
+{% endif %}
+{% endfor%}
+
+</div>
+{% endblock %}

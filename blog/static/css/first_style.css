@@ -1,0 +1,399 @@
+body {
+background: url('http://emporios.org/images/back.jpg');
+
+/*    background-size: 100%;*/
+}
+
+.my_cont{
+    color:aliceblue;
+/*    background-color: bisque;*/
+/*    background-color: #FFFAFA;*/ /*снежный*/
+/*    background-color: #FFFAF0; снежный1*/
+    background-color: rgba(250 , 248,248 , 0.75); 
+/*    margin-top: 100px;*/
+    height: 100%;
+    border-radius: 50px;
+    text-decoration:red;
+    
+}
+
+.btn_zakaz{
+  position: fixed;
+  left:93%;
+  top:50%;
+  text-align:center;
+  transform: rotate(-90deg);
+    z-index: 100;
+}
+.modal-backdrop {
+    
+  z-index: -1;
+    
+}
+
+/*Хедер*/
+.header{
+   color: deeppink;
+/* background-image: url('https://pp.userapi.com/c604816/v604816007/38027/3uBUTXBNNlo.jpg');*/
+
+    height: 50px;
+}
+
+
+ul.menu li {
+     color:#8B0000;
+}
+
+
+.name {
+/*    position: relative;*/
+    top:30%;
+/*    left:30%;*/
+    font-family: Monotype Corsiva Cursive;
+    font-size:30pt;
+    color:floralwhite;
+    text-align: center;
+}
+
+.name_vit{
+/*
+    position:relative;
+    left :30%;
+*/
+     font-family: Monotype Corsiva Cursive;
+    font-size:30pt;
+    color:floralwhite;
+}
+/**/
+
+
+/*
+ul.nav li {
+    margin: 80px;
+}
+*/
+
+li{
+    margin-right : 50px;
+    font-size: 11pt;
+}
+
+ul.hor_nav {
+    margin: 0;
+    padding:5px;
+    
+}
+ul.hor_nav li {
+    display: inline;
+    margin-right: 4px;
+    padding: 3%;
+    color: aliceblue;
+}
+/*
+div.collapse{
+    width: 500px;
+}
+*/
+
+/*Слайдер*/
+.icon-bar{
+    color: black;
+}
+
+.div_carousel{
+   
+   height:500px;
+    width :400px;
+}
+
+/*Форма заказа*/
+div.form_zakaz{
+    
+    color: black;
+    font-family: Parkavenue;
+}
+div.form-group{
+    margin:5px;
+}
+span {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+
+
+.stol{
+    height:500px;
+    background-image: url('http://static.panoramio.com/photos/original/108350162.jpg');
+/*    background-image: image({% static 'image/marsala_main.jpg' %});*/
+    background-repeat: no-repeat;
+    background-size: 1150px 500px;
+   border-radius: 20px;
+    margin: 10px;
+
+}
+
+div.gallery{
+    position: relative;
+    top: 120px;
+    padding : 10px;
+    height :280px;
+    outline: 2px solid white;
+}
+#gallery{
+    font-family: Courier New, monospace;
+    font-size:36px;
+    color:Red;
+}
+
+a.btn {
+    width :300px;
+}
+
+/*Footer*/
+
+.footer_ul li{
+/*    padding: 50px;*/
+    margin:20px;
+}
+ul{
+    
+    list-style-type: none;
+}
+
+.col-md-7 iframe{
+    margin:20px;
+    width: 80%;
+    height:220px;
+}
+h4.text_header_modal {
+    
+    color:black;
+    
+}
+.calendar{
+    color:black;
+}
+p{
+color:black;
+}
+
+
+.thumb img { 
+    filter: none; /* IE6-9 */ 
+    -webkit-filter: grayscale(0); 
+    border-radius:5px; 
+    background-color: #fff; 
+    border: 1px solid #ddd; 
+    padding:5px; 
+} 
+
+.thumb img:hover { 
+    filter: gray; /* IE6-9 */ 
+    -webkit-filter: grayscale(1); 
+} 
+.thumb { 
+    padding:5px; 
+} 
+
+.my_img{
+    border-bottom-right-radius: 15px;
+}
+
+.div_news{
+    padding: 10px;
+    margin: 10px;
+    float: left;
+    
+}
+/*
+div.img_news{
+    height:200px;
+}
+*/
+#img_news{
+    height : 300px;
+    width : 300px;
+    
+}
+
+.form_1{
+    border: 2px solid black;
+    border-radius:  25px;
+    padding: 5px;
+    padding-right: 5px;
+    margin: 5px;
+    color:black;
+}
+
+.modal-backdrop{
+    z-index:-1;
+}
+
+
+#myModal{
+    z-index:1500;
+}
+
+/*галерея*/
+
+
+/*
+.size_image_gallery{
+    height: 300px;
+    width:300px;
+}
+*/
+
+/*
+div.gallery_photo{
+    background-image: url('http://www.krivcovo.com/img/oformlenie_svadeb_green_second.JPG');
+    height: 300px;
+    width: 300px;
+    margin-bottom: 5%;
+
+}
+*/
+
+/*
+div.gallery_photo p{
+    display: none;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Segoe UI';
+    line-height: 300px;
+    text-align: center;
+    color: #fff;
+}
+div.gallery_photo:hover p{
+    display: block;
+    background: rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+*/
+
+p.important_com:first-letter{
+    font-size:300%;
+    font-style: cursive;
+    font-family: Comic Sans, Comic Sans MS;	
+    color:#8B0000;
+}
+
+p.important_com{
+    padding-top: 10%;
+    font-size:150%;
+}
+
+.comments{
+/*
+    border-bottom:1px solid #8B0000;
+    border-right:1px solid #8B0000;
+*/
+      box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+    margin:1%;
+   background-color:beige;
+}
+.comments_div{
+    margin-left:3% ;
+}
+
+.text_com{
+    padding-left: 3%;
+}
+
+p.auth_name:first-letter{
+    font-size: 130%;
+    font-style: cursive;
+    font-family: Comic Sans, Comic Sans MS;	
+    color:#8B0000;
+}
+
+p.text_com{
+    
+    font-style: cursive;
+    font-family: Comic Sans, Comic Sans MS;	
+}
+
+.carousel_margin{
+  position: relative;
+    top:-50px;
+}
+
+
+.name_gallery_style{
+    font-size:28pt;
+    color:black;
+    font-style: cursive;
+    font-family: Comic Sans, Comic Sans MS;	
+}
+
+figcaption.name_gallery_style:first-letter{
+    color:chartreuse;
+    font-style: cursive;
+    font-family: Comic Sans, Comic Sans MS;	
+}
+
+.name_gallery_style_rustik{
+    font-size:28pt;
+    color:black;
+    font-style: cursive;
+    font-family: Comic Sans, Comic Sans MS;	
+}
+
+figcaption.name_gallery_style_rustik:first-letter{
+    
+    color:chocolate;
+    font-style: cursive;
+    font-family: Comic Sans, Comic Sans MS;	
+}
+
+
+.name_gallery_style_marsala{
+    font-size:28pt;
+    color:black;
+    font-style: cursive;
+    font-family: Comic Sans, Comic Sans MS;	
+}
+
+figcaption.name_gallery_style_marsala:first-letter{
+    
+    color:darkred;
+    font-style: cursive;
+    font-family: Comic Sans, Comic Sans MS;	
+}
+
+
+.name_gallery_style_bir{
+    font-size:28pt;
+    color:black;
+    font-style: cursive;
+    font-family: Comic Sans, Comic Sans MS;	
+}
+
+figcaption.name_gallery_style_bir:first-letter{
+    
+    color:aqua;
+    font-style: cursive;
+    font-family: Comic Sans, Comic Sans MS;	
+}
+
+
+.style_photo{
+    font-size: 20pt;
+    position: absolute;
+    top:40%;
+    
+}
+
+.gallery_photo_main{
+    margin-left: 10px;
+    height: 500px;
+    width: 500px;
+}
+
+.position_1{
+    position: relative;
+    left: 50%;
+    top:-500px;
+}

@@ -1,0 +1,29 @@
+{% extends "main.html" %}
+{% block content %}
+
+<h1>Регистрация</h1>
+<form action = "sign_up/" method = "post">{% csrf_token %}
+<label for = "first_name" class ="first_name"> Имя</label>
+{{ form.first_name }
+    <input type="text"  , placeholder="имя" , name = 'first_name'/>
+<label class = "last_name">Фамилия</label>
+     <input type="text"  , placeholder="dfvbkbz" , name = 'last_name'/>
+{{ form.last_name }}
+{{ form.email.errors }}
+<label class = "email">E-mail</label>
+    <input type="email"  , placeholder="mail" , name = 'email'/>
+{{ form.email }}
+{{form.errors.values.0}}
+<label class = "username"> Юзернейм</label>
+    <input type="text"  , placeholder="usrname" , name = 'username'/>
+{{ form.username }}
+{{form.errors.values.1}}
+<label class  = "password1"> Пароль </label>
+    <input type="password"  , placeholder="password" , name = 'password1'/>
+{{ form.password1 }}
+<label class = "password2">Пароль ещё раз</label>
+      <input type="password"  , placeholder="password2" , name = 'password2'/>
+{{ form.password2 }}
+<input type = "submit" value = "Регистрация">
+</form>
+{% endblock %}

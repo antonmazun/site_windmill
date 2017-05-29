@@ -1,0 +1,32 @@
+{% extends  'main1.html' %}
+{% block news %}
+{% if result %}
+<!--<h1 style = "color:black;">{{result}}</h1>-->
+<script>
+        alert("{{result}}");
+        </script>
+{%endif%}
+
+    {% for i in news %}
+
+    <div class="row carousel_margin">
+        <center> <h1 style = "color:#6f4a26;s">{{i.title1}}</h1></center>
+    <div class="col-md-12 div_news">
+        <div class = "col-md-4">
+   <img src = "{{i.img1.url}}" alt = "холодні закуски"  class = "img-responsive" id  = "img_news">
+    </div>
+       <div class = "col-md-8">
+        <p style = "word-wrap:break-word;" class = "">{{i.content1}}</p>
+        </div>
+    </div>
+            {% if user.is_superuser %}
+<form action = "/del_news/{{i.id}}/" method = "POST">{% csrf_token %}
+        <input class  ="btn btn-danger" type = "submit"  value = "Видалити">
+        </form>
+{% endif %}
+       </div>
+    {% endfor %}
+       
+
+
+{%endblock%}
